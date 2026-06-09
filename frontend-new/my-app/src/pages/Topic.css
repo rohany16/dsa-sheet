@@ -1,0 +1,263 @@
+/* ===========================
+   Dashboard
+=========================== */
+
+.dashboard-container {
+  max-width: 1400px;
+  margin: 30px auto;
+  padding: 0 20px 40px;
+}
+
+.dashboard-loading {
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  font-weight: bold;
+  color: #6d28d9;
+}
+
+/* ===========================
+   Header
+=========================== */
+
+.dashboard-header {
+  margin-bottom: 30px;
+}
+
+.dashboard-header h1 {
+  color: #6d28d9;
+  font-size: 34px;
+  margin-bottom: 8px;
+}
+
+.dashboard-header p {
+  color: #666;
+  font-size: 16px;
+}
+
+/* ===========================
+   Chapter Card
+=========================== */
+
+.chapter-card {
+  background: #ffffff;
+  border-radius: 12px;
+  margin-bottom: 24px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.chapter-header {
+  background: #f7f3ff;
+  padding: 18px 24px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.chapter-header:hover {
+  background: #efe7ff;
+}
+
+.chapter-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #6d28d9;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+/* ===========================
+   Table
+=========================== */
+
+.problem-table {
+  width: 100%;
+}
+
+.problem-table-header,
+.problem-table-row {
+  display: grid;
+  grid-template-columns:
+    70px
+    minmax(260px, 3fr)
+    130px
+    130px
+    130px
+    120px
+    140px;
+
+  align-items: center;
+  gap: 10px;
+
+  padding: 16px 20px;
+}
+
+.problem-table-header {
+  background: #faf8ff;
+  color: #6d28d9;
+  font-weight: 700;
+  border-top: 1px solid #ececec;
+  border-bottom: 1px solid #ececec;
+}
+
+.checkbox-header {
+  text-align: center;
+}
+
+.problem-table-row {
+  border-bottom: 1px solid #f1f1f1;
+  transition: background 0.2s ease;
+}
+
+.problem-table-row:hover {
+  background: #fcfbff;
+}
+
+.problem-table-row:last-child {
+  border-bottom: none;
+}
+
+/* ===========================
+   Checkbox
+=========================== */
+
+.checkbox-cell {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.checkbox-cell input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+  accent-color: #6d28d9;
+  margin: 0;
+}
+
+/* ===========================
+   Problem Name
+=========================== */
+
+.problem-name {
+  font-weight: 500;
+  color: #333;
+  word-break: break-word;
+}
+
+/* ===========================
+   Links
+=========================== */
+
+.problem-table-row a {
+  text-decoration: none;
+  color: #6d28d9;
+  font-weight: 600;
+  transition: 0.2s;
+}
+
+.problem-table-row a:hover {
+  color: #4c1d95;
+  text-decoration: underline;
+}
+
+/* ===========================
+   Difficulty Badge
+=========================== */
+
+.difficulty {
+  display: inline-block;
+  min-width: 75px;
+  text-align: center;
+  padding: 6px 12px;
+  border-radius: 20px;
+  color: white;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.easy {
+  background: #16a34a;
+}
+
+.medium {
+  background: #f59e0b;
+}
+
+.hard {
+  background: #dc2626;
+}
+
+/* ===========================
+   Status Badge
+=========================== */
+
+.status {
+  display: inline-block;
+  min-width: 95px;
+  text-align: center;
+  padding: 6px 12px;
+  border-radius: 20px;
+  color: white;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.completed {
+  background: #16a34a;
+}
+
+.pending {
+  background: #f59e0b;
+}
+
+/* ===========================
+   Responsive
+=========================== */
+
+@media (max-width: 1200px) {
+  .problem-table-header,
+  .problem-table-row {
+    grid-template-columns:
+      60px
+      minmax(220px, 2fr)
+      110px
+      110px
+      110px
+      100px
+      120px;
+  }
+}
+
+@media (max-width: 992px) {
+  .problem-table-header {
+    display: none;
+  }
+
+  .problem-table-row {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 18px;
+  }
+
+  .problem-table-row > div {
+    width: 100%;
+  }
+
+  .checkbox-cell {
+    justify-content: flex-start;
+  }
+
+  .chapter-title {
+    font-size: 18px;
+  }
+
+  .dashboard-header h1 {
+    font-size: 28px;
+  }
+}
